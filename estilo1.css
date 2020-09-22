@@ -1,0 +1,129 @@
+* {
+    border-radius: 0.5rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15vh;
+    align-items: center;
+    justify-items: center;
+    /* grid-template-areas: "titulo" "menu" "social"; */
+    color: rgb(4, 39, 10);
+    background-color: lightgray;
+    /* height: 15vh; */
+}
+
+header h1 {
+    grid-column: 1/2;
+    font-family: 'Libre Caslon Text';
+    font-size: 3em;
+    font-weight: lighter;
+    /* margin-left: 0.5rem; */
+}
+
+nav {
+    grid-column: 2/3;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+}
+
+.menu-item {
+    background-color: transparent;
+    color: rgb(4, 39, 10);
+    text-decoration: none;
+    text-align: center;
+    width: 4rem;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem 0;
+    padding: 0.5rem;
+    align-content: center;
+    box-shadow: 1px 1px 2px 1px rgb(4, 39, 10);
+    transition: padding 0.3s linear;
+}
+
+.menu-item:hover {
+    padding: 1rem;
+    transition: padding 0.1s linear;
+}
+
+address {
+    grid-column: 2/3;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    width: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-end;
+}
+
+address a {
+    color: rgb(16, 66, 25);
+}
+
+footer {
+    background-color: lightgray;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Estilos sección de index.html */
+
+section {
+    width: 100%;
+    height: 120vh;
+}
+
+section h3 {
+    font-family: 'Libre Caslon Text';
+    background-color: lightgray;
+    padding: 0.5rem
+}
+
+.inicio {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40%;
+}
+
+.inicio p:not(.fondo) {
+    width: 70%;
+    height: 70%;
+}
+
+.inicio img {
+    left: 70%;
+    max-width: 30%;
+    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.fondo {
+    position: absolute;
+    text-align: start;
+    left: 70%;
+    width: 30%;
+}
+
+.fondo-izq {
+    position: absolute;
+    text-align: start;
+    left: 1%;
+    width: 30%;
+}
+
+.inicio img:hover {
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 0.2;
+}
