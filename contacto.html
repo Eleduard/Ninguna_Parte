@@ -9,32 +9,45 @@
     <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
     <link rel="stylesheet" href="estilo.css">
-    <title>NP Atelier - Galería</title>
+    <title>NP Atelier - Contacto</title>
 </head>
 <body>
     <header>
         <h1><b>Ninguna Parte</b></h1>
         <nav>
-            <a class="menu-item" href="index.html">
+            <a class="menu-item" href="#">
                Inicio
             </a>
-            <a class="menu-item" href="#">
+            <a class="menu-item" href="galeria.html">
                 Galería
             </a>
-            <a class="menu-item" href="contacto.html">
+            <a class="menu-item" href="#">
                 Contacto
             </a>
         </nav>
     </header>
-    <main id="main">
-        <h3 id="pintura">Pintura</h3>
-            <img src="recursos/spidey.jpg" alt="spiderman">
-            <img src="recursos/Sarah.jpg" alt="laberinto 2">
-        <h3 id="escultura">Escultura</h3>
-            <img src="recursos/hada.jpg" alt="hada">
-        <h3 id="fotografia">Fotografía</h3>
-            <img src="recursos/luna_fuego.jpg" alt="luna">
-    </main>
+    <h3>Contactanos</h3>
+    <form action="show_data.html" target="respuesta">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="firstname" name="Nombre" placeholder="Ingresá tu nombre"><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="lastname" name="Apellido" placeholder="Ingresá tu apellido">
+        <p>Seleccioná tu género:
+        <input type="radio" name="Genero" id="hombre" value="Hombre">
+        <label for="hombre">Hombre</label>
+        <input type="radio" name="Genero" id="mujer" value="Mujer">
+        <label for="mujer">Mujer</label>
+        <input type="radio" name="Genero" id="otro" value="No binario">
+        <label for="otro">No binario</label></p>
+        <p>
+            Dejanos tu comentario:
+            <br><br>
+            <textarea name="comentarios" id="comentarios" rows="6" cols="60" placeholder="Escribí aquí tu comentario"></textarea>
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reset">
+    </form>
+    <!-- <iframe name="respuesta" width="400" height="400"></iframe> -->
     <footer>
         <address>
             <a href="https://www.facebook.com/laura.darre.77" target="_blank">

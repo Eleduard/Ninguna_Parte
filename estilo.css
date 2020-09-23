@@ -3,23 +3,23 @@
 }
 
 header {
-    display: flex;
-    flex-direction: row nowrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-areas: 'header nav';
     align-items: center;
+    justify-items: center;
     color: rgb(4, 39, 10);
     background-color: lightgray;
-    height: 15vh;
 }
 
 header h1 {
+    grid-area: header;
     font-family: 'Libre Caslon Text';
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: lighter;
-    margin-left: 0.5rem;
 }
 
 nav {
+    grid-area: nav;
     display: flex;
     justify-content: flex-end;
     align-items:center;
@@ -30,8 +30,6 @@ nav {
     color: rgb(4, 39, 10);
     text-decoration: none;
     text-align: center;
-    width: 4rem;
-    height: auto;
     border-radius: 0.5rem;
     margin: 0 0.5rem 0;
     padding: 0.5rem;
@@ -46,59 +44,79 @@ nav {
 }
 
 address {
+    font-size: 2rem;
     position: relative;
-    width: 1rem;
     display: flex;
-    flex-flow: row wrap;
-    align-content: flex-end;
-    justify-self: flex-end;
+    justify-content: space-around;
+}
+
+address a {
+    color: black;
 }
 
 footer {
     background-color: lightgray;
+    text-align: center;
+    margin: 1rem 0;
 }
 
 /* Estilos sección de index.html */
 
-section {
-    width: 100%;
-    height: 120vh;
+.index {
+    display: grid;
+    grid-template-areas: 
+                        'taller taller taller'
+                        'parrafo1 parrafo1 foto1'
+                        'artista artista artista'
+                        'foto2 parrafo2 parrafo2';
 }
 
-section h3 {
+.index img {
+    max-width: 25vw;
+    height: auto;
+}
+
+h3, .index article, form {
     font-family: 'Libre Caslon Text';
     background-color: lightgray;
-    padding: 0.5rem
+    padding: 0.5rem;
 }
 
-.inicio {
-    background-color: lightgray;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 40%;
+#taller {
+    grid-area: taller;
 }
-
-.inicio p:not(.fondo) {
-    width: 70%;
-    height: 70%;
+#art-taller {
+    grid-area: parrafo1;
+    align-self: stretch;
 }
-
-.inicio img {
-    left: 70%;
-    max-width: 30%;
-    z-index: 1;
+#arania {
+    grid-area: foto1;
     transition-property: opacity;
     transition-duration: 1s;
 }
-
-.fondo {
-    position: absolute;
-    left: 70%;
-    width: 30%;
+#fondo-der {
+    grid-area: foto1;
+    z-index: -1;
 }
 
-.inicio img:hover {
+#artista {
+    grid-area: artista;
+}
+#art-artista {
+    grid-area: parrafo2;
+    align-self: stretch;
+}
+#maquillaje {
+    grid-area: foto2;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+#fondo-izq {
+    grid-area: foto2;
+    z-index: -1;
+}
+
+.index img:hover {
     transition-property: opacity;
     transition-duration: 1s;
     opacity: 0.2;
@@ -107,12 +125,14 @@ section h3 {
 /* Estilos de fotos.html */
 
 main {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-areas: 
+                        'pintura pintura pintura pintura'
+                        'obra1 texto1 obra2 texto2'
+                        'escultura escultura escultura escultura'
+                        'obra3 texto3 obra4 texto4'
+                        'foto foto foto foto'
+                        'obra5 texto5 obra6 texto6';
 }
 
 #main img {
@@ -127,4 +147,43 @@ main {
     transition-property: opacity;
     transition-duration: 0.25s;
     opacity: 0.25
+}
+
+#pintura {
+    grid-area: pintura;
+}
+
+#escultura {
+    grid-area: escultura;
+}
+img[alt="hada"] {
+    grid-area: obra3;
+}
+
+#fotografia {
+    grid-area: foto;
+}
+img[alt="luna"] {
+    grid-area: obra5;
+}
+
+/* Estilos para el formulario */
+
+form {
+    text-align: center;
+}
+form > input {
+    height: 1.5rem;
+    margin: 1rem;
+    border: none;
+    box-shadow: 1px 1px 2px 1px rgb(4, 39, 10);
+}
+
+
+@media screen and (max-width: 480px) {
+    header {
+        grid-template-areas: 
+                            'header' 
+                            'nav';
+    }
 }
