@@ -118,7 +118,6 @@ h3 {
     transition-duration: 1s;
 }
 #fondo-izq {
-    /* font-size: 2vw; */
     grid-area: foto2;
     z-index: -1;
 }
@@ -129,9 +128,9 @@ h3 {
     opacity: 0.2;
 }
 
-/* Estilos de fotos.html */
+/* Estilos de galeria.html */
 
-main {
+#main {
     display: grid;
     grid-template-areas: 
                         'pintura pintura pintura pintura'
@@ -143,21 +142,28 @@ main {
 }
 
 #main img {
-    width: 130px;
+    width: 30vw;
     height: auto;
-    margin: .25rem;
-    transition-property: opacity;
-    transition-duration: 0.25s;
 }
-
-#main img:hover {
-    transition-property: opacity;
-    transition-duration: 0.25s;
-    opacity: 0.25
+#main p {
+    font-family: 'Dancing Script';
+    font-size: 1.5;
 }
 
 #pintura {
     grid-area: pintura;
+}
+img[alt="spiderman"] {
+    grid-area: obra1;
+}
+#spidey {
+    grid-area: texto1;
+}
+img[alt="Sarah-laberinto"] {
+    grid-area: obra2;
+}
+#sarah {
+    grid-area: texto2;
 }
 
 #escultura {
@@ -166,12 +172,30 @@ main {
 img[alt="hada"] {
     grid-area: obra3;
 }
+#hada {
+    grid-area: texto3;
+}
+img[alt="gusano-laberinto"] {
+    grid-area: obra4;
+}
+#gusano {
+    grid-area: texto4;
+}
 
 #fotografia {
     grid-area: foto;
 }
 img[alt="luna"] {
     grid-area: obra5;
+}
+#luna {
+    grid-area: texto5;
+}
+img[alt="abeja"] {
+    grid-area: obra6;
+}
+#abeja {
+    grid-area: texto6;
 }
 
 /* Estilos para el formulario */
@@ -222,6 +246,19 @@ input[type="radio"]:focus {
     }
     article, pre {
         font-size: 2vw;
+    }
+    
+    #main {
+        grid-template-areas:
+        'pintura pintura'
+        'obra1 texto1'
+        'obra2 texto2'
+        'escultura escultura'
+        'obra3 texto3'
+        'obra4 texto4'
+        'foto foto'
+        'obra5 texto5'
+        'obra6 texto6';
     }
 }
 
