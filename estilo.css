@@ -72,12 +72,18 @@ footer {
 }
 
 .index img {
-    max-width: 25vw;
+    width: 25vw;
     height: auto;
 }
 
-h3, .index article, form {
+h3 {
     font-family: 'Libre Caslon Text';
+    background-color: lightgray;
+    padding: 0.5rem;
+}
+
+.index article, form {
+    font-family: 'Merienda';
     background-color: lightgray;
     padding: 0.5rem;
 }
@@ -87,7 +93,6 @@ h3, .index article, form {
 }
 #art-taller {
     grid-area: parrafo1;
-    align-self: stretch;
 }
 #arania {
     grid-area: foto1;
@@ -95,6 +100,7 @@ h3, .index article, form {
     transition-duration: 1s;
 }
 #fondo-der {
+    font-size: 1vw;
     grid-area: foto1;
     z-index: -1;
 }
@@ -112,6 +118,7 @@ h3, .index article, form {
     transition-duration: 1s;
 }
 #fondo-izq {
+    /* font-size: 2vw; */
     grid-area: foto2;
     z-index: -1;
 }
@@ -179,11 +186,47 @@ form > input {
     box-shadow: 1px 1px 2px 1px rgb(4, 39, 10);
 }
 
+input:focus, textarea:focus {
+    background-color: rgb(247, 255, 139);
+    outline-style: none;
+}
 
-@media screen and (max-width: 480px) {
+input[type="radio"]:focus {
+    outline: 1px dotted;
+}
+
+
+@media screen and (max-width: 600px) {
     header {
         grid-template-areas: 
                             'header' 
                             'nav';
+    }
+    .index {
+        grid-template-areas:
+                            'taller taller'
+                            'parrafo1 parrafo1'
+                            'foto1 fondo1'
+                            'artista artista'
+                            'parrafo2 parrafo2'
+                            'foto2 fondo2';
+    }
+    #fondo-der {
+        grid-area: fondo1;
+    }
+    #fondo-izq {
+        grid-area: fondo2;
+    }
+    h3 {
+        font-size: 3vw;
+    }
+    article, pre {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #art-taller {
+        font-size: 1.5vw;
     }
 }
