@@ -118,6 +118,7 @@ h3 {
     transition-duration: 1s;
 }
 #fondo-izq {
+    font-size: 1vw;
     grid-area: foto2;
     z-index: -1;
 }
@@ -263,7 +264,7 @@ input[type="radio"]:focus {
 }
 
 @media screen and (max-width: 980px) {
-    #art-taller {
+    #art-taller, #art-artista {
         font-size: 1.5vw;
     }
 }
