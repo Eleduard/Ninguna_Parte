@@ -204,7 +204,7 @@ img[alt="abeja"] {
 form {
     text-align: center;
 }
-form > input {
+form input:not(#otro):not(#mujer):not(#hombre) {
     height: 1.5rem;
     margin: 1rem;
     border: none;
@@ -219,6 +219,30 @@ input:focus, textarea:focus {
 input[type="radio"]:focus {
     outline: 1px dotted;
 }
+
+form div {
+    display: block;
+}
+
+/* Estilos para ubucacion.html */
+
+.direccion {
+    display: grid;
+    grid-template-areas: 'mapa direccion';
+    margin: 1rem 0;
+}
+
+.direccion iframe {
+    grid-area: mapa;
+    width: 50vw;
+    height: 30vw;
+}
+
+#dir {
+    grid-area: direccion;
+}
+
+
 
 
 @media screen and (max-width: 600px) {
@@ -260,6 +284,10 @@ input[type="radio"]:focus {
         'foto foto'
         'obra5 texto5'
         'obra6 texto6';
+    }
+
+    form, *[placeholder] {
+        font-size: 2.5vw;
     }
 }
 
