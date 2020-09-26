@@ -226,8 +226,18 @@ form div {
 
 /* Estilos para ubucacion.html */
 
+.direccion::after {
+    content: "";
+    background: url("recursos/foto-planta.JPG");
+    background-attachment: fixed;
+    opacity: 0.5;
+    grid-area: direccion;
+    z-index: -1; 
+    border-radius: 0.5rem;  
+}
 .direccion {
     display: grid;
+    grid-template-columns: 60% 40%;
     grid-template-areas: 'mapa direccion';
     margin: 1rem 0;
 }
@@ -239,6 +249,8 @@ form div {
 }
 
 #dir {
+    font-family: 'Satisfy';
+    margin-left: 1rem;
     grid-area: direccion;
 }
 
