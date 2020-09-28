@@ -273,14 +273,14 @@ form div {
                             'parrafo2 parrafo2'
                             'foto2 fondo2';
     }
-    .menu-intem {
-        margin: 0;
-    }
     #fondo-der {
         grid-area: fondo1;
     }
     #fondo-izq {
         grid-area: fondo2;
+    }
+    h1 {
+        font-size: 4vw;
     }
     h3 {
         font-size: 3vw;
